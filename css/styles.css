@@ -486,8 +486,9 @@ h2 {
     margin-bottom: 0;
 } */
 
-
-
+.examples-works li:hover .about-work-text{
+    transform: translateY(0);
+}
 
 
 
@@ -513,7 +514,36 @@ h2 {
             1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.examples-works p {
+.about-work {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-work-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--background-main);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-duration: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-work-text:hover {
+    top: 0;
+}
+
+.examples-works-type{
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
