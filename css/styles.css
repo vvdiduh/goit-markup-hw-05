@@ -669,6 +669,13 @@ footer {
     pointer-events: none;
 }
 
+
+.backdrop.is-hidden .modal {
+    transition-property: transform;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+
 .modal {
     width: 528px;
     height: 581px;
@@ -677,20 +684,8 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    animation-name: modal;
-    animation-duration: 3000ms;
-    animation-iteration-count: infinite;
-}
-
-@keyframes modal{
-    0% {
-        transform: (180deg);
-    }
-
-    100% {
-        transform: (0deg);
-    }
+    transform: translate(-50%, -50%) scale(1);
+    transition-duration: 700ms;
 }
 
 
